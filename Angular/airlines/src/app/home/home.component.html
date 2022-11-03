@@ -1,0 +1,62 @@
+<!Doctype html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+<marquee><h1>Home</h1></marquee>
+<img src="../../assets/images/Boeing.png">
+<section>An airline is a company that provides air transport services for traveling passengers and freight. Airlines use aircraft to supply these services and may form partnerships or alliances with other airlines for codeshare agreements, in which they both offer and operate the same flight. Generally, airline companies are recognized with an air operating certificate 
+    or license issued by a governmental aviation body. Airlines may be scheduled or charter operators.</section>
+    <h1>List of All the data is here</h1>
+    <button class="btn btn-danger btn-rounded" (click)="readUser()"> View User</button>
+    <table class="table ">
+        <tr>
+            <th scope="col">#</th>
+        <th>id</th>
+        <th>name</th>
+        <th>dept</th>
+        <th>salary</th>
+        </tr>
+        <tr *ngFor="let user of users">
+            <th scope="row">#</th>
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.dept}}</td>
+            <td>{{ user.salary }}</td>
+            <td><button class="btn btn-danger btn-rounded" (click)="deleteUser(user.id)"> Delete User</button></td>
+        </tr>
+    </table>
+    <br><br><br>
+    <div *ngFor="let i of info">
+    <li>
+        <h1>info = {{i}} </h1>
+    </li>
+    </div>
+    <div *ngFor="let i of info4">
+    <li>
+        <h1>info = {{i.item}} </h1>
+        <h1>info = {{i.rec}} </h1>
+    </li>
+    </div>
+    <div *ngIf="true">
+    <li>
+        <h1>Hello world</h1>
+    </li>
+    </div>
+    <div *ngIf="num%2==0">
+    <li>
+        <h1>Hello world</h1>
+    </li>
+    </div>
+    <!--<div *ngIf="isLoggedIn; else loggedOut">
+        Welcome back, friend.
+      </div>
+      
+      <ng-template #loggedOut>
+        Please friend, login.
+      </ng-template>-->
+      
+    <br>
+</body>
+</html>

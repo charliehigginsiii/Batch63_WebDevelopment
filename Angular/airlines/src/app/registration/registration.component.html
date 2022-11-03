@@ -1,0 +1,27 @@
+<form [formGroup]="profileForm" (ngSubmit)="submit()">
+    <!-- <form action="action_page.php" method="post"> -->
+    <div class="imgcontainer">
+ 
+    </div>
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h4>
+                <input type="text" placeholder="Enter id" name="id" required formControlName="id">
+            
+                <br>
+                <input type="text" placeholder="Enter name" name="name" formControlName="name">
+                <br>
+                <input type="text" placeholder="Enter dept" name="phone" required formControlName="dept">
+                <br>
+                <input type="text" placeholder="Enter salary" name="email" required formControlName="salary">
+                <br>
+            
+ 
+                <button type="submit">Register</button><br>
+            </h4>
+        </div>
+ 
+        <div class="jumbotron text-center">
+            <h1 style="color:green">{{ack | uppercase}}</h1>
+           
+            </div>
